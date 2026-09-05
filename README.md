@@ -56,4 +56,4 @@ zip -r -FS portal-auto-login.xpi manifest.json background.js content.js popup.* 
 ```
 
 ## Releases 
-[https://raw.com](portal-auto-login v1.0)
+* [portal-auto-login v1.0](https://github.com/noisyboy/portal-auto-login/raw/refs/heads/main/releases/downloads/v1.0/portal-auto-login.xpi)
