@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "portal-auto-login@noisyboy.github.io": {
+      "updates": [
+        {
+          "version": "1.0",
+          "update_link": "https://github.com/noisyboy/portal-auto-login/releases/downloads/v1.0/portal-auto-login.xpi"
+        }
+      ]
+    }
+  }
+}
