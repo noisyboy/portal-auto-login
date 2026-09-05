@@ -18,6 +18,31 @@ A zero-touch, minimalist captive portal bypass and auto-authentication browser e
 
 ---
 
+## Installation 
+
+```
+git clone https://github.com/noisyboy/portal-auto-login.git
+
+```
+```
+cd portal-auto-login
+
+```
+### Build .xpi Package
+``` 
+zip -r -FS portal-auto-login.xpi manifest.json background.js content.js popup.* help.html welcome.html icon*.svg
+
+```
+## Usage
+
+   * Open the extension popup from your toolbar.
+
+   * In the Credentials tab, enter your network username and password.
+
+   * In the Network tab, set the target domain (or leave * for universal matching).
+    
+   * Connect to an untrusted Wi-Fi network. The extension will automatically trigger and authenticate. If needed, manually force an HTTP probe at http://neverssl.com.
+
 ## Project Structure
 
 ```text
