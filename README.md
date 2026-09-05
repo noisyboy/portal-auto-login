@@ -53,3 +53,7 @@ zip -r -FS portal-auto-login.xpi manifest.json background.js content.js popup.* 
 ├── help.html         # Technical documentation & usage instructions
 ├── welcome.html      # First-run onboarding screen
 └── icon*.svg         # Scalable vector interface icons
+```
+
+## Releases 
+* [portal-auto-login v1.0](https://github.com/noisyboy/portal-auto-login/raw/refs/heads/main/releases/downloads/v1.0/portal-auto-login.xpi)
