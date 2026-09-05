@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Auto-Login - Initialized</title>
+    <style>
+        :root {
+            --bg-main: #0a0514;       
+            --bg-secondary: #1a0b2e;  
+            --border-color: #4b267a;  
+            --text-main: #ebdffd;     
+            --text-muted: #8569a8;    
+            --accent-pink: #ff2a75;   
+            --active-cyan: #05d9e8;   
+        }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2 {
+            color: var(--accent-pink);
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255, 42, 117, 0.4);
+        }
+        h1 { border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        .terminal-box {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--active-cyan);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .highlight { color: var(--active-cyan); font-weight: bold; }
+        .step { margin-bottom: 15px; }
+        .social-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .social-link {
+            color: var(--active-cyan);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            color: var(--accent-pink);
+            text-shadow: 0 0 8px rgba(255, 42, 117, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>[+] SYSTEM INITIALIZED</h1>
+    
+    <div class="terminal-box">
+        <p><strong>Status:</strong> Captive Portal Bypass Engine Online.</p>
+        <p>Portal Auto-Login is now running in the background, ready to intercept network redirects and execute authentication payloads.</p>
+    </div>
+
+    <h2>Initialization Sequence</h2>
+    
+    <div class="step">
+        <span class="highlight">Step 1: Pin the Interface</span><br>
+        Click the puzzle piece icon in your browser toolbar and pin the extension for quick access to your profiles.
+    </div>
+
+    <div class="step">
+        <span class="highlight">Step 2: Configure Payloads</span><br>
+        Open the extension popup and navigate to the <strong>Credentials</strong> tab. Enter your identity and secret for your target network.
+    </div>
+
+    <div class="step">
+        <span class="highlight">Step 3: Set Target Scope</span><br>
+        In the <strong>Network</strong> tab, define the specific gateway domain (e.g., <code>cp.gateway.com.</code>) or leave it as <code>*</code> to deploy universally against any intercepted portal.
+    </div>
+
+    <h2>Update Notes (v1.0)</h2>
+    <ul>
+        <li>Implemented Universal DOM Parser for dynamic field mapping.</li>
+        <li>Added Raw Request Override for direct POST/GET payload execution.</li>
+        <li>Bypasses standard JS-disabled submit buttons via virtual keystroke dispatching.</li>
+    </ul>
+
+    <p style="margin-top: 40px; color: var(--text-muted); font-size: 0.9em;">
+        Type <span class="highlight">http://neverssl.com</span> in a new tab to force a network probe. Click the <span class="highlight">? Help</span> button in the extension for full technical documentation.
+    </p>
+
+    <!-- GitHub Social Footer Added Here -->
+    <div class="social-footer">
+        <span style="color: var(--text-muted);">Developed by </span>
+        <a href="https://github.com/noisyboy" target="_blank" class="social-link">
+            @noisyboy
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Portal Auto-Login",
+  "version": "1.0",
+  "description": "Automatically authenticates against known captive portals.",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_icon": "icon.svg",
+    "default_popup": "popup.html",
+    "default_title": "Portal Auto-Login"
+  },
+  "icons": {
+    "16": "icon16.svg",
+    "48": "icon48.svg",
+    "128": "icon.svg"
+  }
+}

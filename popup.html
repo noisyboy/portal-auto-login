@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <h1 class="header-title">PORTAL LOGIN</h1>
+
+        <!-- Top Controls -->
+        <div class="top-controls">
+            <div class="target-network">
+                <span class="check-icon">✓</span> <span id="display-target">Any Portal</span>
+                <div class="sub-text">⚙ Profile: <span id="display-profile-name">Default</span></div>
+            </div>
+            <div class="master-toggle">
+                <button class="toggle-btn active" id="btn-on">On</button>
+                <button class="toggle-btn" id="btn-off">Off</button>
+                <div class="sub-text accent-text">⚙ Automation settings</div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" data-target="pane-credentials">Credentials</div>
+            <div class="tab" data-target="pane-network">Network</div>
+            <div class="tab" data-target="pane-logs">Logs</div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            
+            <!-- PANE 1: Credentials -->
+            <div id="pane-credentials" class="pane active-pane">
+                <div class="input-row">
+                    <button class="icon-btn prev-profile">&lt;</button>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" placeholder="Username">
+                      
+                    </div>
+                    <button class="icon-btn next-profile">&gt;</button>
+                </div>
+               <div class="input-row">
+    <div class="input-wrapper" style="width: 100%; border-radius: 4px;">
+        <input type="password" id="password" placeholder="Password">
+       
+    </div>
+</div>
+                <button id="save-btn" class="action-btn">Save Profile</button>
+                <button id="delete-profile-btn" class="action-btn danger-btn">Delete Profile</button>
+            </div>
+
+            <!-- PANE 2: Network Targeting -->
+            <div id="pane-network" class="pane">
+                <div class="input-row">
+                    <div class="input-wrapper" style="width: 100%;">
+                        <input type="text" id="profile-name" placeholder="e.g., University Wifi">
+                        <span class="input-label">Profile Name</span>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-wrapper" style="width: 100%;">
+                        <input type="text" id="target-domain" placeholder="e.g., gateway.local or *">
+                        <span class="input-label">Target Portal Domain (Use * for Any)</span>
+                    </div>
+                </div>
+                <button id="add-new-profile-btn" class="action-btn">Create New Blank Profile</button>
+                <div class="input-row" style="margin-top: 10px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+    <label style="color: var(--accent-orange); font-size: 12px; cursor: pointer;">
+        <input type="checkbox" id="use-raw"> Enable Raw Request Override
+    </label>
+</div>
+<div id="raw-fields" style="display: none; margin-top: 5px;">
+    <select id="raw-method" class="input-wrapper" style="width: 100%; margin-bottom: 5px; background: var(--bg-main); color: var(--text-main);">
+        <option value="POST">POST</option>
+        <option value="GET">GET</option>
+    </select>
+    <input type="text" id="raw-url" class="input-wrapper" style="width: 100%; margin-bottom: 5px; box-sizing: border-box;color:var(--text-main)" placeholder="Auth URL (e.g., https://cp.jnu.ac.in:6082/...)">
+    <textarea id="raw-payload" style="width: 100%; height: 50px; background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); padding: 5px; font-family: monospace; box-sizing: border-box;" placeholder="escapeUser=id&passwd=secret&ok=Login"></textarea>
+</div>
+            </div>
+
+            <!-- PANE 3: Logs -->
+            <div id="pane-logs" class="pane">
+                <div id="log-container" style="height: 100px; overflow-y: auto; font-size: 11px; color: var(--text-muted); text-align: left; padding: 5px; border: 1px solid var(--border-color); background: #0f1416;">
+                    <!-- Logs will populate here -->
+                </div>
+                <button id="clear-logs-btn" class="action-btn">Clear Logs</button>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Auto-Login is ready. <br>Configure profiles for different networks.</p>
+            <div class="footer-buttons">
+                <button id="help-btn" class="footer-btn">❓ Help</button>
+                <button id="status-btn" class="footer-btn">Status</button>
+            </div>
+            <div id="status-message"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

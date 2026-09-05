@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Auto-Login - Documentation</title>
+    <style>
+        :root {
+            --bg-main: #0a0514;       
+            --bg-secondary: #1a0b2e;  
+            --border-color: #4b267a;  
+            --text-main: #ebdffd;     
+            --text-muted: #8569a8;    
+            --accent-pink: #ff2a75;   
+            --active-cyan: #05d9e8;   
+        }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2, h3 {
+            color: var(--accent-pink);
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255, 42, 117, 0.4);
+        }
+        h1 { border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        .code-block {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 4px;
+            color: var(--active-cyan);
+            overflow-x: auto;
+        }
+        .highlight { color: var(--active-cyan); }
+        .danger { color: var(--accent-pink); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Portal Auto-Login // Docs</h1>
+    <p>An automated, multi-profile captive portal bypass and authentication engine.</p>
+
+    <h2>1. Core Mechanics</h2>
+    <p>The extension listens for network anomalies—specifically, when a standard HTTP request (e.g., to <code>neverssl.com</code>) is hijacked and redirected to a local gateway. Once detected, the extension evaluates the target domain and executes the corresponding profile.</p>
+
+    <h2>2. Standard Mode (Universal DOM Parser)</h2>
+    <p>If <span class="highlight">Raw Request Override</span> is disabled, the engine injects a content script into the portal page.</p>
+    <ul>
+        <li>It dynamically maps visible DOM elements, prioritizing <code>type="password"</code> and its preceding text field.</li>
+        <li>It dispatches native <code>input</code> and <code>change</code> events to bypass client-side JavaScript validation.</li>
+        <li>It forces a physical <code>.click()</code> on the submit button to ensure all native form payloads are included.</li>
+    </ul>
+
+    <h2>3. Advanced Mode (Raw Request Override)</h2>
+    <p>For highly obfuscated gateways that aggressively block DOM manipulation, enable the <span class="highlight">Raw Request Override</span> in the Network tab. This bypasses the UI entirely and fires a direct HTTP packet.</p>
+    <div class="code-block">
+        <strong>Method:</strong> POST<br>
+        <strong>URL:</strong> https://cp.gateway.local/login.php<br>
+        <strong>Payload:</strong> escapeUser=admin&passwd=secret&ok=Login
+    </div>
+    <p><span class="danger">Note:</span> If the gateway utilizes dynamic CSRF tokens or single-use nonces generated on load, the raw payload may fail with a 503 or 401. In these environments, rely on the Standard DOM Parser.</p>
+
+    <h2>4. Troubleshooting</h2>
+    <p>If the extension fails to trigger automatically upon connecting to a new network, the OS may be isolating the portal. To force a trigger, manually navigate to a plaintext HTTP site:</p>
+    <div class="code-block">http://neverssl.com</div>
+
+</body>
+</html>

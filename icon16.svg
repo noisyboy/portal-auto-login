@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+<defs>
+<image id="image7" width="16" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACmklEQVQ4jWWTz2ucVRSGn3Pu/Wbm+2aYMU6CwQFpa0BxkY0rFReWuBBBVxVxIYJ/hSi4E/8FwdKd+5YWKSqiS1dSuxI7RMOYNOnUzGQyP77v3ntcZJKOeJb3nPfh8J77CqtlJoCn3y+Y5x08BQCBKY3ZiCtXpkBAxM4l/kJ8zRxQ4/5hu9YousnpWqjRAvDGREdFq7x/OCQdTDCbIxKfAMwy+hQcHK9BXC9DeNq77Kov5Y0zevyx7NS/h7Lg9KnH9BliNkWkEq6Z40tazMcbvjbtpSCvqvC2efdbXIQfqGv0VXwN0VeSk7tK+ik0igFl+4jnZSSYZTx4vIkuLvnKfWHCn7FKN3HNv4nzKUzB5QVx/qxz9XeFdCnUGp+QbJet7p4CSjXLUbeOcoKXm6Q0QMpdGid9GrGPuF2SHxDDLURO0Gqdapafe6B454koZkaVJnh7xIPuI97qlgB8y5zLgybqOogk4lID6MUVHAkwcdmCY1dyY3kuEeMGgWNXissWgC1n+S8goihQRU+zVHZWejsozVKpokeXsyuARIiBQCKKWkaBsw4v/dXCLOMry9g5e7OMgiiKW2qWHiSyfEaKQ1LsWvTbXvNp2EwLfh+OeN0So7Dmc91IUbeF0KV0Q7J8drbBeyT2JxMsHIYs/1RIL5rYxxiX0WqLlm1Rd8+ZZO+rxZeDC59j4ZD9yQRALn7iL4M2vXbXp/BMOq2uqvJmUr5JFpM3+SCJ/Kxi34VkD2mmI3q9MSLVmRkiFb/eGbM4ehgy2XPe37UkX2uyD73pR+a47iTcDrNyDz/b505vjEh4ssFqoD6jgd/votkGmXQAqGxEqo74Y/wP77wwPQ/S/wHnkb53r0A3W7TrTQDGi1PSwYTt7elqlAH+Bd0UQy5XWyCrAAAAAElFTkSuQmCC"/>
+<image id="image12" width="16" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAw0lEQVQ4je2RPWpCYRBFz8z7XsCggkVaWy2tswJLV5MlZA9B3ImlO8gr0vlXCSFNIEr83txUaXyCFpae8jKcYebCHTsNNHjpAB2SP5KjIHlNTSb53qrX3el8aih17FKkCYohhRIR71j0ySyBt8sCK9sQE6QRmGHxhHjGVF0nKHFkK6QW0hYxBDa4r8/9wBtJ9j3SAXHEyGAB1IT9XifAvnGmYB+IMaiPWQWanRM0T+gdfvgqP0k+R/l/64L6odHAnRvxBy7ARWOhnMlZAAAAAElFTkSuQmCC"/>
+</defs>
+<g id="surface1">
+<path style="fill-rule:nonzero;fill:rgb(3.921569%,1.960784%,7.843138%);fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(29.411766%,14.901961%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 32 4 L 96 4 C 111.46875 4 124 16.53125 124 32 L 124 96 C 124 111.46875 111.46875 124 96 124 L 32 124 C 16.53125 124 4 111.46875 4 96 L 4 32 C 4 16.53125 16.53125 4 32 4 Z M 32 4 " transform="matrix(0.125,0,0,0.125,0,0)"/>
+<use xlink:href="#image7"/>
+<use xlink:href="#image12"/>
+</g>
+</svg>
